@@ -69,8 +69,7 @@ void handleChildExit(int sig) {
 
 int main() {
     signal(SIGCHLD, handleChildExit);
-    std::cout << "Mother Task is starting...";
-    std::cout << "Mother Task is starting...";
+    std::cout << "Mother Task is starting..." << std::endl;
     std::vector<pid_t> pids;
 
     auto launchTask = [&](void (*taskFunc)()) {
